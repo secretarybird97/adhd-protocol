@@ -1,0 +1,136 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{bibtex/bib/references.bib}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{balance}
+\begin{document}
+\title{Detección de TDAH \\ utilizando IA}
+
+\author{María~Barriba,
+    Miguel~Cuevas,
+    Marco~León% <-this % stops a space
+    \thanks{M. Barriba, M. Cuevas, and M. León son parte de la Facultad de Ciencias Químicas e Ingeniería, Universidad Autónoma de Baja California, México (e-mails: barribam@uabc.edu.mx, mcuevas80@uabc.edu.mx, marco.leon11@uabc.edu.mx).}}
+
+\markboth{Tópicos Selectos de Investigación, Protocolo de Investigación, \today}%
+{Barriba \MakeLowercase{\textit{et al.}}: Protocolo de Investigación}
+
+\maketitle
+
+\begin{abstract}
+    This document describes the most common article elements and how to use the IEEEtran class with \LaTeX \ to produce files that are suitable for submission to the Institute of Electrical and Electronics Engineers (IEEE).  IEEEtran can produce conference, journal and technical note (correspondence) papers with a suitable choice of class options.
+\end{abstract}
+
+\begin{IEEEkeywords}
+    Machine learning, artificial intelligence, ADHD, diagnosis, intervention.
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+\IEEEPARstart{W}{elcome} to the updated and simplified documentation to using the IEEEtran \LaTeX \ class file. The IEEE has examined hundreds of author submissions using this package to help formulate this easy to follow guide. We will cover the most commonly used elements of a journal article. For less common elements we will refer back to the ``IEEEtran\_HOWTO.pdf''.
+
+This document applies to version 1.8b of IEEEtran.
+
+The IEEEtran template package contains the following example files:
+\begin{list}{}{}
+    \item{bare\_jrnl.tex}
+    \item{bare\_conf.tex}
+    \item{bare\_jrnl\_compsoc.tex}
+    \item{bare\_conf\_compsoc.tex}
+    \item{bare\_jrnl\_comsoc.tex}
+\end{list}
+These are ``bare bones" templates to quickly understand the document structure.
+
+It is assumed that the reader has a basic working knowledge of \LaTeX. Those who are new to \LaTeX \ are encouraged to read Tobias Oetiker's ``The Not So Short Introduction to \LaTeX '', available at: \url{http://tug.ctan.org/info/lshort/english/lshort.pdf} which provides an overview of working with \LaTeX.
+
+\section{Justificación}
+El Trastorno por Déficit de Atención e Hiperactividad (TDAH), representa una preocupación significativa en toda la población, ya que afecta el rendimiento académico y la calidad de vida de quienes lo padecen \cite{aparicio2024tecnologias}. Es uno de los trastornos del neurodesarrollo con más alta prevalencia, estimada en 5\%, en la población infantil \cite{boechi2023tecnologias}. El TDAH tiene un impacto significativo en la vida de las personas, incluyendo dificultades en la escuela, en el trabajo y en las relaciones interpersonales [4]. Por lo tanto, es importante detectar y tratar el TDAH de manera efectiva desde niños. Este trastorno se caracteriza por dificultades en la atención, la concentración y el control de impulsos; estos síntomas llevan a problemas en los entornos ya mencionados [3]. Esta discapacidad no tiene cura, pero puede ser gestionada eficazmente, y algunos síntomas pueden mejorar a medida que las personas crecen, según el National Center on Birth Defects and Developmental Disabilities (NCBDDD) en 2023.
+
+En cuanto a los métodos de diagnóstico y tratamiento clásico, la OMS recomiendan que las intervenciones de primera línea para el TDAH sean las no farmacológicas [6] (ambientales, sociales, conductuales y psicológicas) y que solo se sugiere la derivación a un especialista para considerar la prescripción del metilfenidato en caso de que no sean eficaces las intervenciones no farmacológicas \cite{boechi2023tecnologias}.
+
+Adelman y Vogel (citados por González et al., 2010, p.325) señalan que entre el 40 \% y el 56 \% de los estudiantes de la ESO, institución en españa [9], que padecen una o varias DEA abandonan los estudios, frente a un 25 \% de abandono académico en estudiantes sin dificultades [10]. Estos datos hacen necesaria la investigación sobre este tema, ya que estas dificultades y el fracaso o abandono escolar que implican, pueden llegar a afectar a toda la trayectoria vital de estos jóvenes, tanto a nivel laboral, como económico, psicológico, emocional y social.
+
+\section{Planteamiento}
+Este trabajo tiene como objetivo examinar en profundidad el estado actual de la investigación en el ámbito del Trastorno por Déficit de Atención e Hiperactividad (TDAH). Para lograr esto, se realizará una revisión exhaustiva de los estudios existentes que analicen el uso de técnicas avanzadas basadas en aprendizaje automático (machine learning) con el propósito de mejorar la precisión en la detección y diagnóstico del TDAH. La investigación se centrará en evaluar cómo estas técnicas emergentes pueden superar las limitaciones de los métodos tradicionales.
+
+Además de la revisión de técnicas de detección, se investigarán y analizarán diversas estrategias de intervención personalizadas propuestas en estos estudios. El objetivo es comprender cómo estas intervenciones pueden ser implementadas para brindar un apoyo más eficaz a las personas afectadas por el TDAH, abordando sus necesidades específicas y mejorando su calidad de vida.
+
+El trabajo tiene como objetivo proponer -partiendo del marco teórico-, una solución efectiva para el diagnóstico de TDAH, que involucre el uso de inteligencia artificial. Esta propuesta servirá para que otros investigadores y personas interesadas en el tema (que cuenten con los recursos necesarios) puedan implementarla con éxito, teniendo con certeza que será efectiva en la práctica. Además de la propuesta para el diagnóstico de TDAH, se prevé encontrar técnicas/métodos que ayuden a fomentar el uso de la tecnología encontrada en la práctica.
+
+El problema principal que se abordará es la dificultad para realizar un diagnóstico temprano y preciso del TDAH, dado que los métodos tradicionales suelen depender de evaluaciones subjetivas y pueden retrasar el tratamiento adecuado [5]. Este trabajo tiene como meta proponer una solución efectiva que supere estas barreras y ofrezca un enfoque más fiable y eficiente para el diagnóstico y la gestión del TDAH.
+
+\section{Marco Teórico}
+El marco teórico va aquí.
+
+\section{Additional Advice}
+
+Please use ``soft'' (e.g., \verb|\eqref{Eq}|) or \verb|(\ref{Eq})|
+cross references instead of ``hard'' references (e.g., \verb|(1)|).
+That will make it possible to combine sections, add equations, or
+change the order of figures or citations without having to go through
+the file line by line.
+
+Please note that the \verb|{subequations}| environment in {\LaTeX}
+will increment the main equation counter even when there are no
+equation numbers displayed. If you forget that, you might write an
+article in which the equation numbers skip from (17) to (20), causing
+the copy editors to wonder if you've discovered a new method of
+counting.
+
+    {\BibTeX} does not work by magic. It doesn't get the bibliographic
+data from thin air but from .bib files. If you use {\BibTeX} to produce a
+bibliography you must send the .bib files.
+
+    {\LaTeX} can't read your mind. If you assign the same label to a
+subsubsection and a table, you might find that Table I has been cross
+referenced as Table IV-B3.
+
+{\LaTeX} does not have precognitive abilities. If you put a
+\verb|\label| command before the command that updates the counter it's
+supposed to be using, the label will pick up the last counter to be
+cross referenced instead. In particular, a \verb|\label| command
+should not go before the caption of a figure or a table.
+
+Please do not use \verb|\nonumber| or \verb|\notag| inside the
+\verb|{array}| environment. It will not stop equation numbers inside
+\verb|{array}| (there won't be any anyway) and it might stop a wanted
+equation number in the surrounding equation.
+
+\balance
+
+\section{A Final Checklist}
+\begin{enumerate}{}{}
+    \item{Make sure that your equations are numbered sequentially and there are no equation numbers missing or duplicated. Avoid hyphens and periods in your equation numbering. Stay with IEEE style, i.e., (1), (2), (3) or for sub-equations (1a), (1b). For equations in the appendix (A1), (A2), etc.}.
+    \item{Are your equations properly formatted? Text, functions, alignment points in cases and arrays, etc. }
+    \item{Make sure all graphics are included.}
+    \item{Make sure your references are included either in your main LaTeX file or a separate .bib file if calling the external file.}
+\end{enumerate}
+
+\printbibliography
+
+\begin{IEEEbiography}{María Barriba}
+    María Barriba is currently pursuing her Bachelor's degree in Electrical Engineering at the Universidad Autónoma de Baja California, México. Her research interests include renewable energy systems, power electronics, and smart grid technologies.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}{Miguel Cuevas}
+    Miguel Cuevas is a student at the Universidad Autónoma de Baja California, México, where he is working towards his Bachelor's degree in Computer Science. His areas of interest include machine learning, artificial intelligence, and software development.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}{Marco León}
+    Marco León is an undergraduate student in the Department of Mechanical Engineering at the Universidad Autónoma de Baja California, México. His research focuses on robotics, automation, and control systems.
+\end{IEEEbiography}
+
+
+\end{document}
+
+
