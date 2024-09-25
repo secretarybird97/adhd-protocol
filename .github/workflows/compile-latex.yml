@@ -21,7 +21,7 @@ jobs:
 
       - name: Move PDF to docs folder
         run: |
-          mv main.pdf docs/
+          mv journal.pdf docs/
 
       - name: Setup pages
         uses: actions/configure-pages@v5
